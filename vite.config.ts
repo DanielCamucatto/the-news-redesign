@@ -5,4 +5,5 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   appType: 'spa',
+  preview: { allowedHosts: ['host.docker.internal', 'localhost'] },
 })
