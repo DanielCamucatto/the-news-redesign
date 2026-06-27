@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import type { CSSProperties } from 'react';
+import { useTheme } from '../components/SiteShell';
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 const navLinks = [
@@ -661,8 +662,7 @@ function HCToggle({ active, onToggle }: { active: boolean; onToggle: () => void 
 
 // ─── Main component ───────────────────────────────────────────────────────────
 export function LandingRedesign() {
-  const [dark,    setDark]    = useState(false);
-  const [hc,      setHc]      = useState(false);
+  const { dark, setDark, hc, setHc } = useTheme();
   const [menu,    setMenu]    = useState(false);
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
