@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("https://assets.thenewscc.com.br/fonts/helvetica-now-display/HelveticaNowDisplay-Light.woff2") format("woff2"),
+       url("https://assets.thenewscc.com.br/fonts/helvetica-now-display/HelveticaNowDisplay-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("https://assets.thenewscc.com.br/fonts/helvetica-now-display/HelveticaNowDisplay-Regular.woff2") format("woff2"),
+       url("https://assets.thenewscc.com.br/fonts/helvetica-now-display/HelveticaNowDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("https://assets.thenewscc.com.br/fonts/helvetica-now-display/HelveticaNowDisplay-Medium.woff2") format("woff2"),
+       url("https://assets.thenewscc.com.br/fonts/helvetica-now-display/HelveticaNowDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("https://assets.thenewscc.com.br/fonts/helvetica-now-display/HelveticaNowDisplay-Bold.woff2") format("woff2"),
+       url("https://assets.thenewscc.com.br/fonts/helvetica-now-display/HelveticaNowDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Now Display";
+  src: url("https://assets.thenewscc.com.br/fonts/helvetica-now-display/HelveticaNowDisplay-Black.woff2") format("woff2"),
+       url("https://assets.thenewscc.com.br/fonts/helvetica-now-display/HelveticaNowDisplay-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Helvetica Now Display", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Cores exatas do site thenewscc.com.br */
+  --color-yellow: #f9d029;
+  --color-yellow-2: #fad760;
+  --color-yellow-3: #fbea8d;
+  --color-yellow-4: #fff4b8;
+  --color-yellow-5: #fdce70;
+
+  --color-brown: #220f0c;
+
+  --color-gray: #605a5a;
+  --color-gray-soft-lp-bg: #fafafa;
+  --color-gray-dark: #111;
+  --color-gray-mid: #1d1d1d;
+  --color-gray-switch: #3a3a3a;
+  --color-gray-disabled: #988e8e;
+
+  --color-orange: #f49454;
+  --color-orange-2: #f6be5b;
+  --color-orange-3: #fdce70;
+
+  /* Border radius */
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+
+  /* Shadows */
+  --shadow-yellow: 0 4px 16px 0 rgba(255, 138, 71, 0.3), 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+  --shadow-yellow-hover: 0 8px 24px 0 rgba(255, 138, 71, 0.4), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  tab-size: 4;
+  line-height: 1.5;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Helvetica Now Display", sans-serif;
+  background-color: #fff;
+  color: #111;
+  min-height: 100vh;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee var(--marquee-duration, 47s) linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
